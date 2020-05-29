@@ -1,35 +1,43 @@
 <template>
   <q-layout view="hHh lpR fFf">
 
-    <Header @clickRight="clickRight"></Header>
+    <Header></Header>
 
-    <q-drawer show-if-above v-model="right" side="right" bordered>
+    <q-drawer show-if-aboveside="left">
+      <!-- drawer content -->
+    </q-drawer>
+    <q-drawer show-if-aboveside="right">
       <!-- drawer content -->
     </q-drawer>
 
     <q-page-container>
-      <router-view/>
+      <div class="row">
+        <div class="col-md-8 col-sm-12 col-xs-12">
+          <router-view/>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <RightSideBar></RightSideBar>
+        </div>
+      </div>
+      <Footer></Footer>
     </q-page-container>
-
-    <q-footer elevated class="bg-grey-8 text-white">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
-          </q-avatar>
-          Title
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-footer>
-
+    <ToolBar></ToolBar>
   </q-layout>
 </template>
 
 <script>
 import Header from 'components/Header'
+import RightSideBar from 'components/RightSideBar'
+import Footer from 'components/Footer'
+import ToolBar from 'components/ToolBar'
 
 export default {
-  components: { Header },
+  components: {
+    ToolBar,
+    Footer,
+    RightSideBar,
+    Header
+  },
   data () {
     return {
       right: true

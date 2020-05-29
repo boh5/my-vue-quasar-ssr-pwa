@@ -1,10 +1,6 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-full.svg"
-    >
-    <q-btn color="white" text-color="black" label="安装App" @click="installApp"></q-btn>
+  <q-page class="">
+    啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
   </q-page>
 </template>
 
